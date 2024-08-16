@@ -160,12 +160,9 @@
 // }
 // let check = playGame("오버워치", false);
 
-// 비행기를 예약할 때, 1인의 표값과 결제한 총 표값을 입력받고 예약 인원이 4인 이상이면 family, 그미만이면 friend를 출력
-const airplain = (price, totalprice, callback) => {
-    personnel = totalprice / price;
+personnel = totalprice / price;
 
-    if (callback) {
-        return callback(personnel);
-    }
-    return personnel;
-};
+if (callback) {
+    return callback(personnel);
+}
+return personnel;
