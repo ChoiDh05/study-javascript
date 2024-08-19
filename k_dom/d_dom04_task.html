@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DOM 실습</title>
+    </head>
+    <body>
+        <strong>Strong 태그입니다.</strong>
+        <div id="a1">
+            <strong>Strong 태그입니다.</strong>
+        </div>
+    </body>
+    <script>
+        // div 안에 있는 strong태그에만 글자 크기를 기본 크기의 1.5배로 설정한다.
+        // div 안에 있지 않은 storong태그에만 글자색을 핫핑크색으로 변경한다.
+        // const divStrong = document.querySelector("div strong");
+        // console.log(divStrong);
+        // divStrong.style.fontSize = "1.5rem";
+
+        // const strong = document.querySelector("strong");
+        // console.log(strong);
+        // strong.style.color = "hotpink";
+
+        const strongs = document.querySelectorAll("strong");
+        strongs.forEach((strong) => {
+            // if (strong.parentElement.id === "a1") {
+            //     strong.style.fontSize = "1.5rem";
+            // } else {
+            //     strong.style.color = "hotpink";
+            // }
+            const style =
+                strong.parentElement.id === "a1"
+                    ? "font-size:1.5rem"
+                    : "color:hotpink";
+            strong.setAttribute("style", style);
+        });
+    </script>
+</html>

@@ -47,13 +47,13 @@
 // let datas = new Array(5).fill(0);
 // console.log(datas);
 
-fill(value): Array 객체의 모든 칸에 value로 초기화
-let datas = new Array(5).fill(0);
+// fill(value): Array 객체의 모든 칸에 value로 초기화
+// let datas = new Array(5).fill(0);
 
-forEach((value, index, array) => {});
-datas.forEach((data, i, datas) => {
-    console.log(data, i, datas);
-});
+// forEach((value, index, array) => {});
+// datas.forEach((data, i, datas) => {
+//     console.log(data, i, datas);
+// });
 
 // datas.forEach((data, i, datas) => {
 //     datas[i] = i + 1;

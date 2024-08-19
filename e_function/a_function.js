@@ -23,18 +23,18 @@
 // 아이디, 비밀번호, 닉네임을 전달받는다.
 // 이 때 닉네임의 기본 값은 '없음'으로 설정한다.
 // JS는 '', "", `` 모두 문자열 값이다.
-function introduce(id, password, nickname = "없음") {
-    let result = "";
+// function introduce(id, password, nickname = "없음") {
+//     let result = "";
 
-    result += "아이디: " + id;
-    result += "\n비밀번호: " + password;
-    result += "\n닉네임: " + nickname;
+//     result += "아이디: " + id;
+//     result += "\n비밀번호: " + password;
+//     result += "\n닉네임: " + nickname;
 
-    return result;
-}
+//     return result;
+// }
 
-let result = introduce("hds1234", "1234");
-console.log(result);
+// let result = introduce("hds1234", "1234");
+// console.log(result);
 
 // 가변 인자
 // function add(...numbers) {
