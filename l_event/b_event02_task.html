@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>포커스, 블러 이벤트 실습</title>
+        <style>
+            input {
+                outline: none;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="" name="info">
+            <input type="text" name="name" placeholder="이름" />
+            <input type="text" name="age" placeholder="나이" />
+        </form>
+    </body>
+    <script>
+        // const name = info.name;
+        // const age = info.age;
+        // // const nameRegex = /^[가-힣]{2,4}$/;
+        // // const ageRegex = /^[0-9]{2,3}+$/;
+
+        // let temp = (name.style.border = "1px solid green");
+
+        // // focus된 input 태그의 테두리는 녹색으로,
+        // name.addEventListener("blur", (e) => {
+        //     if (name.value) {
+        //         name.style.border = temp;
+        //         return;
+        //     }
+        //     name.style.border = "1px solid red";
+        //     name.focus();
+        // });
+
+        // // blur된 input 태그의 테두리는 빨간색으로 설정
+        // age.addEventListener("blur", (e) => {
+        //     if (age.value) {
+        //         age.style.border = temp;
+        //         return;
+        //     }
+        //     age.style.border = "1px solid red";
+        //     age.focus();
+        // });
+
+        const inputs = document.querySelectorAll("input");
+
+        inputs.forEach((input) => {
+            input.addEventListener("blur", (e) => {
+                if (input.value) {
+                    input.style.border = "1px solid red";
+                    return;
+                }
+                input.focus();
+            });
+
+            input.addEventListener("focus", (e) => {
+                input.style.border = "1px solid green";
+            });
+        });
+    </script>
+</html>
+<!-- ----------------------강사님 풀이--------------------------- -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>포커스, 블러 이벤트 실습</title>
+        <style>
+            input {
+                outline: none;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="">
+            <input type="text" name="name" placeholder="이름" />
+            <input type="text" name="age" placeholder="나이" />
+        </form>
+    </body>
+    <script>
+        // focus된 input 태그의 테두리는 녹색으로,
+        // blur된 input 태그의 테두리는 빨간색으로 설정
+        const inputs = document.querySelectorAll("input[type=text]");
+        inputs.forEach((input) => {
+            input.addEventListener("focus", (e) => {
+                // e.target: 이벤트 발생시킨 객체
+                e.target.style.border = "1px solid green";
+            });
+            input.addEventListener("blur", (e) => {
+                e.target.style.border = "1px solid red";
+            });
+        });
+    </script>
+</html> -->
